@@ -123,8 +123,9 @@ def exp_lr_scheduler(optimizer, epoch, init_lr=0.001, lr_decay_epoch=7):
 
 use_gpu = True
 
-densenet = models.densenet12(1pretrained=True)
-num_features = densenet.fc.in_features
+densenet = models.densenet121(pretrained=True)
+#num_features = densenet.fc.in_features
+num_features = 1024
 print(num_features)
 densenet.fc = nn.Linear(num_features, 12)
 print(densenet.fc)
