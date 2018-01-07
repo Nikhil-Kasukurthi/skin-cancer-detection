@@ -2,9 +2,6 @@ import pandas as pd
 import os
 import pickle
 import numpy as np
-import urllib.request
-from tqdm import tqdm
-import tarfile
 
 def class_dir(parent_path):
     '''
